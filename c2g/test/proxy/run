@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+EXAMPLES=../../src/github.com/c2stack/c2g/examples
+
+case $1 in 
+proxy)
+  cd $EXAMPLES/proxy; go run ./main.go
+  ;;
+device)
+  cd $EXAMPLES/car/car-advanced; go run ./main.go
+  ;;
+stop)
+  ps x | grep  _obj/exe/main | awk '{print $1}' | xargs kill -15 2>/dev/null || true
+  ;;  
+*)
+  echo "$1 not defined" >&2
+  exit -1
+  ;;
+esac
