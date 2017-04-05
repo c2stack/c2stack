@@ -3,8 +3,7 @@ export GOPATH=$(abspath .)
 PROGRAMS = \
 	c2-module \
 	c2-doc \
-	c2-notify \
-	c2-datastore
+	c2-notify
 
 all : $(PROGRAMS)
 

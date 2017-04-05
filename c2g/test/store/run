@@ -7,7 +7,7 @@ store)
   cd $EXAMPLES/store; go run ./main.go
   ;;
 device)
-  cd $EXAMPLES/car/car-advanced; go run ./main.go
+  cd $EXAMPLES/device; go run ./main.go
   ;;
 stop)
   ps x | grep  _obj/exe/main | awk '{print $1}' | xargs kill -15 2>/dev/null || true
